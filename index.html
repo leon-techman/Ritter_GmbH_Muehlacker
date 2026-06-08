@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Elektrotechnik Mühlacker | Ritter GmbH – Installation, Messtechnik & Sicherheitstechnik</title>
+<meta name="description" content="Ritter GmbH – Ihr Elektrotechnik-Partner in Mühlacker seit 1920. Elektroinstallation, Messtechnik, Sicherheitstechnik & Datentechnik für Industrieunternehmen."/>
+<meta name="robots" content="index,follow"/>
+<meta name="geo.region" content="DE-BW"/>
+<meta name="geo.placename" content="Mühlacker"/>
+<meta name="geo.position" content="48.956011;8.869699"/>
+<link rel="canonical" href="https://www.ritter.gmbh/"/>
+<meta property="og:title" content="Elektrotechnik Mühlacker | Ritter GmbH"/>
+<meta property="og:description" content="Seit 1920: Elektroinstallation, Messtechnik, Sicherheitstechnik & Datentechnik aus einer Hand – für Produktionsunternehmen in Baden-Württemberg."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.ritter.gmbh/"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["LocalBusiness","ElectricalContractor"],"name":"Ritter GmbH","description":"Elektrotechnik in Mühlacker seit 1920. Elektroinstallation, Messtechnik, Sicherheitstechnik, Datentechnik.","url":"https://www.ritter.gmbh","foundingDate":"1920","address":{"@type":"PostalAddress","streetAddress":"Industriestraße 121","addressLocality":"Mühlacker","postalCode":"75417","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":48.956011,"longitude":8.869699},"areaServed":["Mühlacker","Stuttgart","Karlsruhe","Pforzheim","Enzkreis","Baden-Württemberg"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --green:   #7AC143;
+  --blue:    #1B9AD6;
+  --dark:    #3D3D3D;
+  --off:     #F5F6F4;
+  --white:   #ffffff;
+  --muted:   #6B7280;
+  --border:  #E5E7EB;
+  --font-d:  'Barlow Condensed', sans-serif;
+  --font-b:  'Barlow', sans-serif;
+  --ease:    cubic-bezier(.19,1,.22,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--dark); font-family: var(--font-b); line-height: 1.6; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 3rem); }
+
+/* ── LOGO SVG ── */
+.logo-svg { display: block; height: 52px; width: auto; }
+
+/* ── NAV ── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 clamp(1.2rem, 4vw, 3rem);
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow .3s;
+}
+#nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a {
+  font-family: var(--font-d); font-size: .82rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--dark); }
+.nav-btn {
+  font-family: var(--font-d); font-size: .78rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .6rem 1.4rem; border-radius: 3px;
+  background: var(--green); color: var(--white);
+  transition: background .2s, transform .15s;
+}
+.nav-btn:hover { background: #6aac38; transform: translateY(-1px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; width: 26px; cursor: pointer; background: none; border: none; }
+.hamburger span { height: 1.5px; background: var(--dark); transition: transform .3s, opacity .2s; }
+
+/* Drawer */
+.drawer {
+  position: fixed; inset: 0; z-index: 99; background: var(--white);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+  transform: translateX(100%); transition: transform .4s var(--ease);
+}
+.drawer.open { transform: translateX(0); }
+.drawer a { font-family: var(--font-d); font-size: 2rem; font-weight: 700; text-transform: uppercase; color: var(--dark); }
+.drawer a:hover { color: var(--green); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  padding-top: 72px;
+  display: flex; flex-direction: column;
+  background: var(--white);
+}
+.hero-main {
+  flex: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 4vw, 3rem) clamp(3rem, 5vw, 5rem) clamp(1.2rem, 5vw, 5rem);
+  max-width: 1200px; margin: 0 auto; width: 100%;
+}
+.hero-label {
+  font-family: var(--font-d); font-size: .72rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--green);
+  display: flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem;
+}
+.hero-label::before { content: ''; width: 20px; height: 1.5px; background: var(--green); }
+.hero-h1 {
+  font-family: var(--font-d); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(3rem, 6vw, 6.5rem); line-height: .92; letter-spacing: -.01em;
+  color: var(--dark); margin-bottom: 1.5rem;
+}
+.hero-h1 em { font-style: normal; color: var(--green); }
+.hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 440px; margin-bottom: 2rem; }
+.hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.btn-primary {
+  font-family: var(--font-d); font-size: .8rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .85rem 1.8rem; border-radius: 3px;
+  background: var(--green); color: var(--white);
+  display: inline-flex; align-items: center; gap: .5rem;
+  transition: background .2s, transform .15s, box-shadow .2s;
+}
+.btn-primary:hover { background: #6aac38; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(122,193,67,.3); }
+.btn-secondary {
+  font-family: var(--font-d); font-size: .8rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .85rem 1.8rem; border-radius: 3px;
+  background: transparent; color: var(--dark);
+  border: 1.5px solid var(--border);
+  display: inline-flex; align-items: center; gap: .5rem;
+  transition: border-color .2s, color .2s, transform .15s;
+}
+.btn-secondary:hover { border-color: var(--dark); transform: translateY(-2px); }
+.micro { font-size: .72rem; color: #9CA3AF; letter-spacing: .05em; }
+
+.hero-trust {
+  display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+  margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);
+}
+.trust-num { font-family: var(--font-d); font-size: 1.8rem; font-weight: 800; color: var(--dark); line-height: 1; }
+.trust-lbl { font-family: var(--font-d); font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.trust-div { width: 1px; height: 30px; background: var(--border); }
+
+/* Hero visual: big year */
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.hero-year {
+  font-family: var(--font-d); font-weight: 900;
+  font-size: clamp(7rem, 16vw, 17rem);
+  color: transparent; -webkit-text-stroke: 1.5px #E5E7EB;
+  line-height: 1; letter-spacing: -.04em; user-select: none;
+  position: relative;
+}
+.hero-year-label {
+  position: absolute; bottom: -1rem; right: 0;
+  font-family: var(--font-d); font-size: .68rem; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Stats bar */
+.stats-bar {
+  background: var(--dark);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.stat {
+  padding: 1.4rem clamp(1rem, 2.5vw, 2rem);
+  border-right: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-direction: column; gap: .2rem;
+}
+.stat:last-child { border-right: none; }
+.stat-n { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--green); line-height: 1; }
+.stat-l { font-family: var(--font-d); font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+
+/* ── SECTION COMMON ── */
+.section-light { background: var(--white); padding: clamp(4rem, 7vw, 8rem) 0; }
+.section-off   { background: var(--off);   padding: clamp(4rem, 7vw, 8rem) 0; }
+.section-dark  { background: var(--dark);  padding: clamp(4rem, 7vw, 8rem) 0; }
+.section-green { background: var(--green); padding: clamp(3rem, 5vw, 5rem) 0; }
+
+.eyebrow {
+  font-family: var(--font-d); font-size: .7rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--green);
+  display: flex; align-items: center; gap: .5rem; margin-bottom: .8rem;
+}
+.eyebrow::before { content: ''; width: 18px; height: 1.5px; background: var(--green); }
+.eyebrow.blue { color: var(--blue); }
+.eyebrow.blue::before { background: var(--blue); }
+.eyebrow.white { color: rgba(255,255,255,.5); }
+.eyebrow.white::before { background: rgba(255,255,255,.3); }
+
+.section-h { font-family: var(--font-d); font-weight: 800; text-transform: uppercase; font-size: clamp(2.2rem, 4.5vw, 4.5rem); line-height: .95; letter-spacing: -.01em; margin-bottom: 1rem; }
+.section-h em { font-style: normal; color: var(--green); }
+.section-h.white { color: var(--white); }
+.section-h.white em { color: var(--green); }
+.section-p { font-size: .97rem; color: var(--muted); line-height: 1.75; max-width: 520px; }
+.section-p.white { color: rgba(255,255,255,.55); }
+
+/* ── LEISTUNGEN ── */
+.leistungen-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+  margin-top: 3rem;
+}
+.svc {
+  background: var(--white); padding: clamp(1.8rem, 3vw, 2.8rem);
+  position: relative; overflow: hidden;
+  transition: background .25s;
+  display: flex; flex-direction: column; gap: .8rem;
+}
+.svc:hover { background: var(--off); }
+.svc::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--green); transform: scaleX(0); transform-origin: left;
+  transition: transform .4s var(--ease);
+}
+.svc:hover::after { transform: scaleX(1); }
+.svc-num {
+  font-family: var(--font-d); font-size: .68rem; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--green);
+}
+.svc h3 {
+  font-family: var(--font-d); font-size: 1.3rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .03em; color: var(--dark);
+}
+.svc p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; padding-top: .4rem; }
+.tag {
+  font-family: var(--font-d); font-size: .62rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .2rem .55rem; border-radius: 2px;
+  border: 1px solid var(--border); color: var(--muted);
+  background: transparent; transition: all .2s;
+}
+.svc:hover .tag { border-color: rgba(122,193,67,.3); color: #5a9630; background: rgba(122,193,67,.06); }
+
+/* ── ÜBER UNS ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.timeline::before {
+  content: ''; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 1px;
+  background: linear-gradient(to bottom, var(--green), rgba(122,193,67,.15));
+}
+.tl { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; padding-bottom: 2rem; }
+.tl:last-child { padding-bottom: 0; }
+.tl-dot {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1; flex-shrink: 0;
+  transition: border-color .2s, background .2s;
+}
+.tl-dot svg { width: 15px; height: 15px; stroke: #9CA3AF; fill: none; stroke-width: 2; transition: stroke .2s; }
+.tl:hover .tl-dot { border-color: var(--green); background: rgba(122,193,67,.06); }
+.tl:hover .tl-dot svg { stroke: var(--green); }
+.tl-body { padding-top: .5rem; }
+.tl-year { font-family: var(--font-d); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin-bottom: .15rem; }
+.tl-title { font-family: var(--font-d); font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: .3rem; }
+.tl-desc { font-size: .85rem; color: var(--muted); line-height: 1.55; }
+
+.phil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: 1rem; }
+.phil {
+  padding: 1.2rem; border: 1px solid var(--border); border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.phil:hover { border-color: rgba(122,193,67,.4); background: rgba(122,193,67,.03); }
+.phil h4 { font-family: var(--font-d); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .25rem; color: var(--dark); }
+.phil p { font-size: .8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── PROZESS ── */
+.prozess-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-top: 3rem; position: relative;
+}
+.prozess-grid::before {
+  content: ''; position: absolute; top: 27px; left: 12%; right: 12%; height: 1px;
+  background: var(--border);
+}
+.step { padding: 2rem 1.5rem; text-align: center; }
+.step-num {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: var(--white);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem;
+  font-family: var(--font-d); font-size: 1rem; font-weight: 800; color: var(--dark);
+  transition: background .25s, border-color .25s, color .25s, box-shadow .25s;
+}
+.step:hover .step-num { background: var(--green); border-color: var(--green); color: var(--white); box-shadow: 0 6px 20px rgba(122,193,67,.3); }
+.step h3 { font-family: var(--font-d); font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem; color: var(--dark); }
+.step p { font-size: .83rem; color: var(--muted); line-height: 1.55; }
+
+/* ── BRANCHEN ── */
+.branchen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin-top: 2rem; }
+.branch {
+  padding: 1.2rem 1.4rem; border: 1px solid var(--border); border-radius: 4px;
+  display: flex; align-items: center; gap: .8rem;
+  font-family: var(--font-d); font-size: .85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--dark);
+  transition: border-color .2s, background .2s, color .2s;
+}
+.branch:hover { border-color: var(--green); background: rgba(122,193,67,.04); color: #3a6e1a; }
+.branch svg { width: 17px; height: 17px; flex-shrink: 0; stroke: var(--green); fill: none; stroke-width: 1.8; }
+
+/* ── CTA BAND ── */
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+.cta-text h2 { font-family: var(--font-d); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 800; text-transform: uppercase; color: var(--white); line-height: 1; }
+.cta-text p { font-size: .9rem; color: rgba(255,255,255,.55); margin-top: .6rem; }
+.btn-white {
+  font-family: var(--font-d); font-size: .8rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .9rem 2rem; border-radius: 3px;
+  background: var(--white); color: var(--dark);
+  display: inline-flex; align-items: center; gap: .5rem; flex-shrink: 0;
+  transition: background .2s, transform .15s;
+}
+.btn-white:hover { background: var(--off); transform: translateY(-2px); }
+.btn-outline-white {
+  font-family: var(--font-d); font-size: .8rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .9rem 2rem; border-radius: 3px;
+  background: transparent; color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.3); flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: .5rem;
+  transition: border-color .2s, transform .15s;
+}
+.btn-outline-white:hover { border-color: rgba(255,255,255,.7); transform: translateY(-2px); }
+
+/* ── EINSATZGEBIET ── */
+.gebiet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.city-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.5rem; }
+.city {
+  font-family: var(--font-d); font-size: .7rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .35rem .75rem; border-radius: 2px;
+  border: 1px solid var(--border); color: var(--muted);
+  transition: all .2s;
+}
+.city.main { background: var(--green); border-color: var(--green); color: var(--white); }
+.city:hover { border-color: var(--green); color: var(--green); }
+
+/* Simple map placeholder */
+.map-box {
+  aspect-ratio: 1; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--off); display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.map-rings { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.ring {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(122,193,67,.2);
+}
+.ring:nth-child(1) { width: 80%; height: 80%; }
+.ring:nth-child(2) { width: 55%; height: 55%; border-color: rgba(122,193,67,.3); }
+.ring:nth-child(3) { width: 30%; height: 30%; border-color: rgba(122,193,67,.5); }
+.map-pin {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--green); position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 8px rgba(122,193,67,.12), 0 0 0 20px rgba(122,193,67,.06);
+  animation: pinFloat 4s ease-in-out infinite;
+}
+.map-pin svg { width: 20px; height: 20px; fill: white; }
+@keyframes pinFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* ── FAQ ── */
+.faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  width: 100%; padding: 1.2rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  text-align: left; background: var(--white);
+  font-family: var(--font-d); font-size: .9rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--dark);
+  cursor: pointer; border: none; transition: background .2s, color .2s;
+}
+.faq-q:hover { background: var(--off); }
+.faq-q.active { color: var(--green); background: rgba(122,193,67,.04); }
+.faq-icon {
+  width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  font-size: .9rem; color: var(--muted); transition: transform .3s, background .2s, border-color .2s;
+}
+.faq-q.active .faq-icon { transform: rotate(45deg); background: rgba(122,193,67,.08); border-color: rgba(122,193,67,.3); color: var(--green); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+.faq-a-inner { padding: 0 1.5rem 1.2rem; font-size: .9rem; color: var(--muted); line-height: 1.65; }
+
+/* ── KONTAKT ── */
+.kontakt-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 5rem); }
+.k-block { display: flex; flex-direction: column; gap: 1.5rem; }
+.k-item { display: flex; gap: .9rem; align-items: flex-start; }
+.k-ico {
+  width: 36px; height: 36px; flex-shrink: 0; border-radius: 4px;
+  background: rgba(122,193,67,.1); border: 1px solid rgba(122,193,67,.2);
+  display: flex; align-items: center; justify-content: center;
+}
+.k-ico svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2; }
+.k-label { font-family: var(--font-d); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .1rem; }
+.k-val { font-size: .93rem; color: var(--dark); }
+.k-val a:hover { color: var(--green); }
+
+.form-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: clamp(1.5rem, 3vw, 2.2rem); }
+.form-title { font-family: var(--font-d); font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1.4rem; }
+.f-grid { display: flex; flex-direction: column; gap: .8rem; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.f-group { display: flex; flex-direction: column; gap: .3rem; }
+.f-label { font-family: var(--font-d); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.f-label .req { color: var(--green); }
+.f-input, .f-select, .f-textarea {
+  background: var(--off); border: 1px solid var(--border); border-radius: 3px;
+  padding: .72rem .9rem; color: var(--dark); font-family: var(--font-b); font-size: .9rem;
+  transition: border-color .2s, box-shadow .2s; -webkit-appearance: none;
+}
+.f-input:focus, .f-select:focus, .f-textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(122,193,67,.12); }
+.f-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem; cursor: pointer;
+}
+.f-textarea { min-height: 96px; resize: vertical; }
+.f-privacy { font-size: .74rem; color: #9CA3AF; line-height: 1.5; }
+.f-privacy a { color: var(--muted); text-decoration: underline; }
+.btn-submit {
+  width: 100%; padding: .9rem; border-radius: 3px; border: none;
+  background: var(--green); color: var(--white); cursor: pointer;
+  font-family: var(--font-d); font-size: .82rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  transition: background .2s, box-shadow .2s, transform .15s;
+}
+.btn-submit:hover { background: #6aac38; box-shadow: 0 8px 24px rgba(122,193,67,.3); transform: translateY(-1px); }
+.btn-submit.sent { background: var(--blue); }
+
+/* ── JOBS ── */
+.jobs-strip {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+  background: var(--off); border: 1px solid var(--border); border-radius: 6px;
+  padding: 2rem 2.5rem; border-left: 3px solid var(--green);
+}
+.jobs-strip h3 { font-family: var(--font-d); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; }
+.jobs-strip p { font-size: .88rem; color: var(--muted); margin-top: .3rem; }
+
+/* ── FOOTER ── */
+#footer { background: var(--dark); padding: clamp(3rem, 5vw, 5rem) 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: clamp(1.5rem, 3vw, 3rem); margin-bottom: 3rem; }
+.f-col h5 { font-family: var(--font-d); font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: .8rem; }
+.f-col ul { display: flex; flex-direction: column; gap: .45rem; }
+.f-col ul li a { font-size: .85rem; color: rgba(255,255,255,.5); transition: color .2s; }
+.f-col ul li a:hover { color: var(--white); }
+.f-contact { font-size: .84rem; color: rgba(255,255,255,.5); display: flex; flex-direction: column; gap: .4rem; }
+.f-contact a:hover { color: rgba(255,255,255,.9); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .8rem; }
+.footer-copy { font-size: .75rem; color: rgba(255,255,255,.25); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .75rem; color: rgba(255,255,255,.25); transition: color .2s; }
+.footer-legal a:hover { color: rgba(255,255,255,.6); }
+
+/* ── SCROLL REVEAL ── */
+[data-r] { opacity: 0; transform: translateY(24px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+[data-r].on { opacity: 1; transform: none; }
+[data-d="1"] { transition-delay: .08s; }
+[data-d="2"] { transition-delay: .18s; }
+[data-d="3"] { transition-delay: .28s; }
+[data-d="4"] { transition-delay: .38s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .hero-main { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+}
+@media (max-width: 860px) {
+  .nav-links, .nav-btn { display: none; }
+  .hamburger { display: flex; }
+  .about-grid, .kontakt-grid, .gebiet-grid { grid-template-columns: 1fr; }
+  .stats-bar, .prozess-grid { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,.1); }
+  .branchen-grid { grid-template-columns: 1fr 1fr; }
+  .leistungen-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .phil-grid { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .f-row { grid-template-columns: 1fr; }
+  .branchen-grid { grid-template-columns: 1fr; }
+  .prozess-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-trust { gap: 1rem; }
+  .trust-div { display: none; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions a { width: 100%; justify-content: center; }
+  .jobs-strip { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer">
+  <a href="#leistungen" onclick="closeD()">Leistungen</a>
+  <a href="#ueber-uns" onclick="closeD()">Über uns</a>
+  <a href="#branchen" onclick="closeD()">Branchen</a>
+  <a href="#kontakt" onclick="closeD()">Kontakt</a>
+  <a href="/jobs.html" onclick="closeD()">Jobs</a>
+</div>
+
+<!-- ══ NAV ══ -->
+<header id="nav">
+  <a href="/" aria-label="Ritter GmbH">
+    <!-- Logo: zwei verschachtelte Blitze + Wortmarke RITTER -->
+    <svg class="logo-svg" viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" aria-label="Ritter GmbH">
+      <!-- Grüner Blitz (oben-links) -->
+      <polygon points="60,4 18,64 38,64 0,116 72,52 50,52" fill="#7AC143"/>
+      <!-- Blauer Blitz (unten-rechts, versetzt) -->
+      <polygon points="82,18 40,78 60,78 22,130 94,66 72,66" fill="#1B9AD6"/>
+      <!-- Wortmarke -->
+      <text x="106" y="90" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="300" letter-spacing="5" fill="#3D3D3D">RITTER</text>
+    </svg>
+  </a>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#branchen">Branchen</a>
+    <a href="#einsatzgebiet">Standort</a>
+    <a href="/jobs.html">Jobs</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:.8rem;">
+    <a href="#kontakt" class="nav-btn">Anfragen</a>
+    <button class="hamburger" id="burger" onclick="toggleD()" aria-label="Menü">
+      <span id="b1"></span><span id="b2"></span><span id="b3"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<main>
+<section id="hero">
+  <div class="hero-main">
+    <div>
+      <div class="hero-label">Mühlacker · Baden-Württemberg · Seit 1920</div>
+      <h1 class="hero-h1">
+        Elektro<em>technik</em><br>
+        die Produktion<br>
+        am Laufen hält.
+      </h1>
+      <p class="hero-sub">
+        Ritter GmbH – spezialisierter Elektrotechnik-Partner für Produktionsunternehmen in Baden-Württemberg. Vier Kompetenzfelder. Ein Ansprechpartner. Über 100 Jahre Erfahrung.
+      </p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Projekt anfragen →</a>
+        <a href="#leistungen" class="btn-secondary">Leistungen ansehen</a>
+      </div>
+      <p class="micro">Kostenlose Erstberatung · Unverbindlich</p>
+      <div class="hero-trust">
+        <div>
+          <div class="trust-num">1920</div>
+          <div class="trust-lbl">Gegründet</div>
+        </div>
+        <div class="trust-div"></div>
+        <div>
+          <div class="trust-num">4×</div>
+          <div class="trust-lbl">Kompetenzfelder</div>
+        </div>
+        <div class="trust-div"></div>
+        <div>
+          <div class="trust-num">B2B</div>
+          <div class="trust-lbl">Fokus Industrie</div>
+        </div>
+        <div class="trust-div"></div>
+        <div>
+          <div class="trust-num">BW</div>
+          <div class="trust-lbl">Baden-Württemberg</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-year">1920
+        <div class="hero-year-label">Gründungsjahr · Mühlacker</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat" data-r data-d="1">
+      <div class="stat-n">100+</div>
+      <div class="stat-l">Jahre Erfahrung</div>
+    </div>
+    <div class="stat" data-r data-d="2">
+      <div class="stat-n">4</div>
+      <div class="stat-l">Kompetenzfelder</div>
+    </div>
+    <div class="stat" data-r data-d="3">
+      <div class="stat-n">Mittel&shy;stand</div>
+      <div class="stat-l">Fokus Produktionsbetriebe</div>
+    </div>
+    <div class="stat" data-r data-d="4">
+      <div class="stat-n">STR–KA</div>
+      <div class="stat-l">Stuttgart bis Karlsruhe</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LEISTUNGEN ══ -->
+<section id="leistungen" class="section-off">
+  <div class="container">
+    <div data-r><div class="eyebrow">Kompetenzfelder</div></div>
+    <h2 class="section-h" data-r data-d="1">Vier Disziplinen.<br><em>Ein Partner.</em></h2>
+
+    <div class="leistungen-grid">
+      <div class="svc" data-r data-d="1">
+        <div class="svc-num">01</div>
+        <h3>Elektroinstallation</h3>
+        <p>Von der Planung bis zur Inbetriebnahme. Wir realisieren elektrische Anlagen für Industrie- und Gewerbeobjekte in der Region – normgerecht, dokumentiert, termingerecht. Mit über 100 Jahren Installationserfahrung.</p>
+        <div class="svc-tags">
+          <span class="tag">Industrieinstallation</span>
+          <span class="tag">Schaltanlagenbau</span>
+          <span class="tag">Energieverteilung</span>
+          <span class="tag">Elektroinstallation Mühlacker</span>
+        </div>
+      </div>
+      <div class="svc" data-r data-d="2">
+        <div class="svc-num">02</div>
+        <h3>Messtechnik & Prüfungen</h3>
+        <p>Präzise Messungen und Prüfungen elektrischer Anlagen nach aktueller Norm. Vollständige Dokumentation für Ihre Betriebssicherheit, Compliance und Versicherung – nach DGUV V3.</p>
+        <div class="svc-tags">
+          <span class="tag">DGUV V3</span>
+          <span class="tag">E-Check</span>
+          <span class="tag">Anlagenprüfung</span>
+          <span class="tag">Messtechnik Industrie</span>
+        </div>
+      </div>
+      <div class="svc" data-r data-d="3">
+        <div class="svc-num">03</div>
+        <h3>Sicherheitstechnik</h3>
+        <p>Einbruchmeldetechnik, Brandmeldeanlagen und Zutrittskontrolle. Seit 2023 als eigenständiges Geschäftsfeld – VdS-normgerecht, zuverlässig, auf Ihre Produktionsstätte zugeschnitten.</p>
+        <div class="svc-tags">
+          <span class="tag">Brandmeldetechnik</span>
+          <span class="tag">Einbruchmeldetechnik</span>
+          <span class="tag">VdS-konform</span>
+          <span class="tag">Sicherheitstechnik Mühlacker</span>
+        </div>
+      </div>
+      <div class="svc" data-r data-d="4">
+        <div class="svc-num">04</div>
+        <h3>Datentechnik & Smart Factory</h3>
+        <p>Netzwerkinfrastruktur, MES-Systeme und Industrie-4.0-Integration. Wir verbinden Maschinen, Systeme und Menschen – und machen Ihre Fertigung messbar und steuerbar.</p>
+        <div class="svc-tags">
+          <span class="tag">MES-Systeme</span>
+          <span class="tag">Industrie 4.0</span>
+          <span class="tag">Smart Factory</span>
+          <span class="tag">Netzwerkinfrastruktur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ÜBER UNS ══ -->
+<section id="ueber-uns" class="section-light">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div data-r><div class="eyebrow">Historie</div></div>
+        <h2 class="section-h" data-r data-d="1">Über 100 Jahre<br><em>in Mühlacker.</em></h2>
+        <div class="timeline" style="margin-top:2rem;" data-r data-d="2">
+          <div class="tl">
+            <div class="tl-dot">
+              <svg viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round"/></svg>
+            </div>
+            <div class="tl-body">
+              <div class="tl-year">1920</div>
+              <div class="tl-title">Gründung in Mühlacker</div>
+              <div class="tl-desc">Gustav Ritter gründet den Betrieb. Beginn mit Glühbirnenverkauf und einfachen Elektroinstallationen – der Grundstein für 100+ Jahre.</div>
+            </div>
+          </div>
+          <div class="tl">
+            <div class="tl-dot">
+              <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16" stroke-linecap="round"/></svg>
+            </div>
+            <div class="tl-body">
+              <div class="tl-year">1977</div>
+              <div class="tl-title">Umfirmierung zur GmbH</div>
+              <div class="tl-desc">Der wachsende Betrieb erhält eine neue Rechtsform. Professionalisierung und Erweiterung des Portfolios.</div>
+            </div>
+          </div>
+          <div class="tl">
+            <div class="tl-dot">
+              <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" stroke-linecap="round"/></svg>
+            </div>
+            <div class="tl-body">
+              <div class="tl-year">2022</div>
+              <div class="tl-title">Teil der Rhein-Ruhr Beteiligungen AG</div>
+              <div class="tl-desc">Ritter wird Teil einer starken Unternehmensgruppe – mehr Rückhalt und breitere Ressourcen bei gleichzeitig lokalem Charakter.</div>
+            </div>
+          </div>
+          <div class="tl">
+            <div class="tl-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round"/></svg>
+            </div>
+            <div class="tl-body">
+              <div class="tl-year">2023</div>
+              <div class="tl-title">Sicherheitstechnik als neues Geschäftsfeld</div>
+              <div class="tl-desc">Einbruch- und Brandmeldetechnik als eigenständige Kompetenz. Das Portfolio ist komplett.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-r data-d="2">
+        <div class="eyebrow">Philosophie</div>
+        <p class="section-p" style="margin-bottom:1.5rem;">Gewachsen aus der klassischen Elektrotechnik bietet die Ritter GmbH mit mehr als 100 Jahren Erfahrung zukunftsorientierte Lösungen für Produktionsbetriebe in Baden-Württemberg – alles aus einer Hand.</p>
+        <div class="phil-grid">
+          <div class="phil">
+            <h4>Qualität</h4>
+            <p>Hochwertige Produkte namhafter Hersteller. Keine Kompromisse bei Material und Ausführung.</p>
+          </div>
+          <div class="phil">
+            <h4>Kommunikation</h4>
+            <p>Respektvoller Umgang auf Augenhöhe – mit Kunden, Mitarbeitern und Lieferanten.</p>
+          </div>
+          <div class="phil">
+            <h4>Zuverlässigkeit</h4>
+            <p>Ein Mann, ein Wort. Termine und Zusagen sind bei uns verbindlich.</p>
+          </div>
+          <div class="phil">
+            <h4>Service</h4>
+            <p>Kompetente Beratung von der Planung bis zur vollständigen Dokumentation.</p>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;gap:.8rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:var(--font-d);font-weight:700;">Teil der Unternehmensgruppe</div>
+            <div style="font-size:.9rem;color:var(--dark);">Rhein-Ruhr Beteiligungen AG · seit 2022</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROZESS ══ -->
+<section class="section-off">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 0;">
+      <div data-r><div class="eyebrow" style="justify-content:center;">So arbeiten wir</div></div>
+      <h2 class="section-h" data-r data-d="1" style="text-align:center;">Vom Briefing zur<br><em>laufenden Anlage</em></h2>
+    </div>
+    <div class="prozess-grid">
+      <div class="step" data-r data-d="1">
+        <div class="step-num">1</div>
+        <h3>Erstgespräch</h3>
+        <p>Wir hören zu, verstehen Ihre Anforderungen und analysieren den Ist-Zustand. Kostenlos und unverbindlich.</p>
+      </div>
+      <div class="step" data-r data-d="2">
+        <div class="step-num">2</div>
+        <h3>Planung & Angebot</h3>
+        <p>Technische Planung, Kalkulation, Terminplan. Transparentes Festpreisangebot mit klar definiertem Scope.</p>
+      </div>
+      <div class="step" data-r data-d="3">
+        <div class="step-num">3</div>
+        <h3>Ausführung</h3>
+        <p>Termingerechte Umsetzung mit minimalem Eingriff in Ihren Betriebsablauf. Koordination aller Gewerke.</p>
+      </div>
+      <div class="step" data-r data-d="4">
+        <div class="step-num">4</div>
+        <h3>Abnahme & Doku</h3>
+        <p>Normgerechte Abnahme, vollständige Dokumentation, Übergabeprotokoll. Alles für Ihre Compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRANCHEN ══ -->
+<section id="branchen" class="section-light">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:2.5rem;" class="about-grid">
+      <div>
+        <div data-r><div class="eyebrow">Zielgruppen</div></div>
+        <h2 class="section-h" data-r data-d="1">Für mittelständische<br><em>Produktions&shy;betriebe</em></h2>
+      </div>
+      <p class="section-p" style="padding-top:3rem;" data-r data-d="2">
+        Unser Schwerpunkt sind Industrieunternehmen in Baden-Württemberg. Wir kennen die Anforderungen moderner Produktionsbetriebe – Verfügbarkeit, Normkonformität und minimale Ausfallzeiten sind unser Maßstab.
+      </p>
+    </div>
+    <div class="branchen-grid" data-r data-d="2">
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Maschinenbau
+      </div>
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke-linecap="round"/></svg>
+        Automotive-Zulieferer
+      </div>
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round"/></svg>
+        Chemie & Pharma
+      </div>
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round"/></svg>
+        Logistik & Lager
+      </div>
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round"/></svg>
+        Gewerbe & Industrie
+      </div>
+      <div class="branch">
+        <svg viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round"/></svg>
+        Lebensmittelproduktion
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<section class="section-dark">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text" data-r>
+        <h2>Ihre Produktion.<br>Unsere Verantwortung.</h2>
+        <p>Seit 1920 vertrauen Produktionsbetriebe in BW auf Ritter GmbH.</p>
+      </div>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;" data-r data-d="2">
+        <a href="#kontakt" class="btn-white">Projekt anfragen →</a>
+        <a href="#leistungen" class="btn-outline-white">Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EINSATZGEBIET ══ -->
+<section id="einsatzgebiet" class="section-off">
+  <div class="container">
+    <div class="gebiet-grid">
+      <div>
+        <div data-r><div class="eyebrow">Standort & Einsatzgebiet</div></div>
+        <h2 class="section-h" data-r data-d="1">Mühlacker –<br><em>zwischen Stuttgart<br>& Karlsruhe</em></h2>
+        <p class="section-p" style="margin-top:1.2rem;" data-r data-d="2">
+          Unser Hauptstandort in Mühlacker liegt strategisch zwischen Stuttgart und Karlsruhe – im Herzen Baden-Württembergs. Schnelle Reaktionszeiten für Kunden im Enzkreis und der gesamten Region.
+        </p>
+        <div class="city-tags" data-r data-d="3">
+          <span class="city main">Mühlacker</span>
+          <span class="city">Pforzheim</span>
+          <span class="city">Enzkreis</span>
+          <span class="city">Stuttgart</span>
+          <span class="city">Karlsruhe</span>
+          <span class="city">Ludwigsburg</span>
+          <span class="city">Vaihingen a. d. Enz</span>
+          <span class="city">Heilbronn</span>
+          <span class="city">Baden-Württemberg</span>
+        </div>
+      </div>
+      <div class="map-box" data-r data-d="2" aria-hidden="true">
+        <div class="map-rings">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="map-pin">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);font-family:var(--font-d);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Industriestraße 121 · 75417 Mühlacker</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section-light">
+  <div class="container" style="max-width:880px;">
+    <div data-r><div class="eyebrow">FAQ</div></div>
+    <h2 class="section-h" data-r data-d="1">Fragen die<br><em>Einkäufer stellen</em></h2>
+    <div class="faq-list" data-r data-d="2">
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Für welche Unternehmensgrößen arbeiten Sie?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Unser Schwerpunkt sind mittelständische Produktionsunternehmen – meist 50 bis mehrere hundert Mitarbeiter. Groß genug für komplexe Industrieprojekte, persönlich genug für direkte Kommunikation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Können Sie alle vier Leistungsbereiche in einem Projekt übernehmen?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Ja – das ist unser Kernversprechen. Elektroinstallation, Messtechnik, Sicherheitstechnik und Datentechnik aus einer Hand bedeutet: ein Ansprechpartner, eine Rechnung, keine Schnittstellenprobleme.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Welche Normen und Zertifizierungen erfüllen Sie?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Alle Arbeiten erfolgen VDE-normgerecht nach aktuell gültigen DIN-VDE-Normen. Sicherheitstechnik nach VdS-Richtlinien. Messtechnische Prüfungen nach DGUV V3 – vollständig dokumentiert.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Wie läuft die Zusammenarbeit bei laufender Produktion?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Wir sind es gewohnt, in aktiven Produktionsumgebungen zu arbeiten. Wartungsfenster, Schichtplanung und Abschnitte werden vor Beginn abgestimmt – mit dem Ziel, Ihren Betrieb so wenig wie möglich zu stören.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Wie schnell erhalten wir ein Angebot?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Nach Vor-Ort-Begehung oder ausführlichem Gespräch erhalten Sie in der Regel innerhalb von 3–5 Werktagen ein detailliertes schriftliches Angebot. Bei dringenden Anfragen sprechen Sie uns direkt an.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)" aria-expanded="false">Bieten Sie Rahmenverträge oder dauerhafte Betreuung an?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Ja. Viele Kunden schätzen eine dauerhafte Partnerschaft mit definierten Reaktionszeiten und Konditionen. Sprechen Sie uns auf Rahmenvereinbarungen an.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KONTAKT ══ -->
+<section id="kontakt" class="section-off">
+  <div class="container">
+    <div data-r><div class="eyebrow">Kontakt & Anfrage</div></div>
+    <h2 class="section-h" data-r data-d="1" style="margin-bottom:3rem;">Projekt besprechen.<br><em>Direkt & persönlich.</em></h2>
+    <div class="kontakt-grid">
+      <div class="k-block" data-r>
+        <div class="k-item">
+          <div class="k-ico"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div>
+            <div class="k-label">Adresse</div>
+            <div class="k-val">Industriestraße 121<br>75417 Mühlacker</div>
+          </div>
+        </div>
+        <div class="k-item">
+          <div class="k-ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round"/></svg></div>
+          <div>
+            <div class="k-label">Website</div>
+            <div class="k-val"><a href="https://www.ritter.gmbh" target="_blank" rel="noopener">www.ritter.gmbh</a></div>
+          </div>
+        </div>
+        <div class="k-item">
+          <div class="k-ico"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round"/></svg></div>
+          <div>
+            <div class="k-label">Kontaktformular</div>
+            <div class="k-val"><a href="/kontakt.html">Zum Formular auf ritter.gmbh →</a></div>
+          </div>
+        </div>
+        <div style="padding:1.2rem;border:1px solid var(--border);border-radius:4px;background:var(--white);">
+          <div class="k-label" style="margin-bottom:.5rem;">Unternehmensgruppe</div>
+          <div style="font-size:.88rem;color:var(--muted);line-height:1.6;">Ritter GmbH ist Teil der <strong style="color:var(--dark);">Rhein-Ruhr Beteiligungen AG</strong> – starker Rückhalt, lokaler Charakter.</div>
+        </div>
+        <a href="https://maps.google.com/?q=Industriestraße+121,+75417+Mühlacker" target="_blank" rel="noopener" class="btn-secondary" style="width:fit-content;">Route auf Google Maps →</a>
+      </div>
+
+      <div class="form-card" data-r data-d="2">
+        <div class="form-title">Projekt anfragen</div>
+        <div class="f-grid">
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label" for="name">Ansprechpartner <span class="req">*</span></label>
+              <input class="f-input" type="text" id="name" placeholder="Max Mustermann" required/>
+            </div>
+            <div class="f-group">
+              <label class="f-label" for="firma">Unternehmen <span class="req">*</span></label>
+              <input class="f-input" type="text" id="firma" placeholder="Muster GmbH" required/>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label" for="tel">Telefon <span class="req">*</span></label>
+              <input class="f-input" type="tel" id="tel" placeholder="+49 7041 …" required/>
+            </div>
+            <div class="f-group">
+              <label class="f-label" for="mail">E-Mail <span class="req">*</span></label>
+              <input class="f-input" type="email" id="mail" placeholder="kontakt@firma.de" required/>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="bereich">Gewünschter Bereich <span class="req">*</span></label>
+            <select class="f-select" id="bereich" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option>Elektroinstallation</option>
+              <option>Messtechnik & Prüfungen (DGUV V3)</option>
+              <option>Sicherheitstechnik – Brandmeldung</option>
+              <option>Sicherheitstechnik – Einbruchmeldung</option>
+              <option>Datentechnik & Netzwerk</option>
+              <option>Smart Factory / MES</option>
+              <option>Mehrere Leistungsbereiche</option>
+              <option>Rahmenvertrag / Dauerbetreuung</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="msg">Projektbeschreibung</label>
+            <textarea class="f-textarea" id="msg" placeholder="Kurze Beschreibung Ihres Projekts, Standort, Zeitrahmen…"></textarea>
+          </div>
+          <p class="f-privacy">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zu. Details: <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <button class="btn-submit" id="submitBtn" onclick="submitForm(event)">Anfrage senden →</button>
+          <p style="font-size:.72rem;color:#9CA3AF;text-align:center;letter-spacing:.04em;">Kostenlose Erstberatung · Unverbindlich</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOBS ══ -->
+<section id="jobs" class="section-light">
+  <div class="container">
+    <div class="jobs-strip" data-r>
+      <div>
+        <h3>Wir wachsen. Wachsen Sie mit.</h3>
+        <p>Elektrotechniker, Mechatroniker und Systemtechniker in der Region Mühlacker – attraktive Karrieremöglichkeiten.</p>
+      </div>
+      <a href="/jobs.html" class="btn-primary">Offene Stellen →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-col">
+        <svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:auto;margin-bottom:.8rem;" aria-label="Ritter GmbH">
+          <polygon points="60,4 18,64 38,64 0,116 72,52 50,52" fill="#7AC143"/>
+          <polygon points="82,18 40,78 60,78 22,130 94,66 72,66" fill="#1B9AD6"/>
+          <text x="106" y="90" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="300" letter-spacing="5" fill="rgba(255,255,255,0.6)">RITTER</text>
+        </svg>
+        <p style="font-size:.84rem;color:rgba(255,255,255,.4);line-height:1.6;max-width:220px;">Elektrotechnik in Mühlacker seit 1920. Teil der Rhein-Ruhr Beteiligungen AG.</p>
+      </div>
+      <div class="f-col">
+        <h5>Leistungen</h5>
+        <ul>
+          <li><a href="/elektroinstallation.html">Elektroinstallation</a></li>
+          <li><a href="/messtechnik.html">Messtechnik & Prüfungen</a></li>
+          <li><a href="/sicherheitstechnik.html">Sicherheitstechnik</a></li>
+          <li><a href="/datentechnik.html">Datentechnik & Smart Factory</a></li>
+          <li><a href="/datentechnik.html">MES-Systeme / Industrie 4.0</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Unternehmen</h5>
+        <ul>
+          <li><a href="#ueber-uns">Über Ritter GmbH</a></li>
+          <li><a href="#branchen">Branchen</a></li>
+          <li><a href="#einsatzgebiet">Standort Mühlacker</a></li>
+          <li><a href="/jobs.html">Jobs & Karriere</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Kontakt</h5>
+        <div class="f-contact">
+          <span>Industriestraße 121<br>75417 Mühlacker</span>
+          <a href="https://www.ritter.gmbh" target="_blank" rel="noopener">www.ritter.gmbh</a>
+          <a href="/kontakt.html">Kontaktformular</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Ritter GmbH · Industriestraße 121 · 75417 Mühlacker · Rhein-Ruhr Beteiligungen AG</p>
+      <div class="footer-legal">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* NAV */
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+/* DRAWER */
+let open = false;
+function toggleD() {
+  open = !open;
+  document.getElementById('drawer').classList.toggle('open', open);
+  const [b1,b2,b3] = ['b1','b2','b3'].map(id => document.getElementById(id));
+  if (open) { b1.style.transform='translateY(6.5px) rotate(45deg)'; b2.style.opacity='0'; b3.style.transform='translateY(-6.5px) rotate(-45deg)'; }
+  else { b1.style.transform=''; b2.style.opacity=''; b3.style.transform=''; }
+}
+function closeD() { open=false; document.getElementById('drawer').classList.remove('open'); ['b1','b2','b3'].forEach(id=>{document.getElementById(id).style.transform='';document.getElementById(id).style.opacity='';}); }
+
+/* SCROLL REVEAL */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+}, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('[data-r]').forEach(el => obs.observe(el));
+
+/* FAQ */
+function faq(btn) {
+  const isOpen = btn.classList.contains('active');
+  document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-expanded','false'); b.nextElementSibling.style.maxHeight = '0'; });
+  if (!isOpen) { btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'; }
+}
+
+/* FORM */
+function submitForm(e) {
+  e.preventDefault();
+  const ids = ['name','firma','tel','mail','bereich'];
+  const missing = ids.filter(id => !document.getElementById(id).value.trim());
+  if (missing.length) {
+    missing.forEach(id => {
+      const el = document.getElementById(id);
+      el.style.borderColor = '#EF4444';
+      setTimeout(() => el.style.borderColor = '', 2000);
+    });
+    return;
+  }
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true; btn.textContent = 'Wird gesendet…';
+  setTimeout(() => { btn.classList.add('sent'); btn.textContent = '✓ Anfrage gesendet – wir melden uns.'; }, 1000);
+}
+</script>
+</body>
+</html>
